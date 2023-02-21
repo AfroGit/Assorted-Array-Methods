@@ -127,7 +127,14 @@ if (count > 0) {
     return count + " Hold";
 
 }
-  // Only change code above this line
+  /* 
+    cc(2); runs.
+    The switch statement hits case 2, jumps down and adds 1 to the variable count.
+    The switch statement then hits the break and cc(3); runs.
+    This cycle continues until the final call is made, cc('A');.
+    After the switch statement, the if statement checks count, which is now 0.
+    This then drops down to the else statement, which will return 0 Hold.*/
+
 }
 
 cc(2); cc(3); cc(7); cc('K'); cc('A');
