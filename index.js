@@ -98,44 +98,57 @@ Your function will be passed par and strokes arguments. Return the correct strin
 /*In the casino game Blackjack, a player can determine whether they have an advantage on the next hand over the house by keeping track of the relative number of high and low cards remaining in the deck. This is called Card Counting.
 
 Having more high cards remaining in the deck favors the player. Each card is assigned a value according to the table below. When the count is positive, the player should bet high. When the count is zero or negative, the player should bet low. */ 
-let count = 0;
+// let count = 0;
 
-function cc(card) {
-  // Only change code below this line
-switch(card){
+// function cc(card) {
+//   // Only change code below this line
+// switch(card){
 
-case 2:
-case 3:
-case 4:
-case 5:
-case 6:
-count++;
-break;
+// case 2:
+// case 3:
+// case 4:
+// case 5:
+// case 6:
+// count++;
+// break;
 
-case 10:
-case 'J':
-case 'Q':
-case 'K':
-case 'A':
-count--;
-break;
+// case 10:
+// case 'J':
+// case 'Q':
+// case 'K':
+// case 'A':
+// count--;
+// break;
 
-}
-if (count > 0) {
-    return count + " Bet";
-  } else {
-    return count + " Hold";
+// }
+// if (count > 0) {
+//     return count + " Bet";
+//   } else {
+//     return count + " Hold";
 
-}
-  /* 
-    cc(2); runs.
-    The switch statement hits case 2, jumps down and adds 1 to the variable count.
-    The switch statement then hits the break and cc(3); runs.
-    This cycle continues until the final call is made, cc('A');.
-    After the switch statement, the if statement checks count, which is now 0.
-    This then drops down to the else statement, which will return 0 Hold.*/
+// }
+//   /* 
+//     cc(2); runs.
+//     The switch statement hits case 2, jumps down and adds 1 to the variable count.
+//     The switch statement then hits the break and cc(3); runs.
+//     This cycle continues until the final call is made, cc('A');.
+//     After the switch statement, the if statement checks count, which is now 0.
+//     This then drops down to the else statement, which will return 0 Hold.*/
 
-}
+// }
 
-cc(2); cc(3); cc(7); cc('K'); cc('A');
-console.log(cc(7));
+// cc(2); cc(3); cc(7); cc('K'); cc('A');
+// console.log(cc(7));
+
+// -------------------------------------------____________
+
+/*Fill in the code for the function incrementer so it returns the value of the global variable fixedValue increased by one.*/ 
+
+let fixedValue = 4;
+
+function incrementer() {
+ return fixedValue + 1;
+};
+var newValue = incrementer(); // Should equal 5
+console.log(fixedValue); // Should print 4
+console.log(newValue);
