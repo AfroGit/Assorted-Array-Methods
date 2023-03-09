@@ -15,14 +15,14 @@ The nextInLine function should then return the element that was removed.
  */ 
 
 // function nextInLine(arr, item) {
-  // Only change code below this line
-  // arr.push(item);
-  // return arr.shift();
-  // Only change code above this line
+ 
+//   arr.push(item);
+//   return arr.shift();
+  
 // };
-// nextInLine([1, 3, 7], 5);
- // console.log(nextInLine([1, 2, 3, 4, 5], 7));
-// console.log(nextInLine.length);
+// // nextInLine([1, 3, 7], 5);
+//   console.log(nextInLine([1, 2, 3, 4, 5], 7));
+//  // console.log(nextInLine.length);
 
 // -----------------------------------------------------
 
@@ -144,11 +144,24 @@ Having more high cards remaining in the deck favors the player. Each card is ass
 
 /*Fill in the code for the function incrementer so it returns the value of the global variable fixedValue increased by one.*/ 
 
-let fixedValue = 4;
+// let fixedValue = 4;
 
-function incrementer() {
- return fixedValue + 1;
-};
-var newValue = incrementer(); // Should equal 5
-console.log(fixedValue); // Should print 4
-console.log(newValue);
+// function incrementer() {
+//  return fixedValue + 1;
+// };
+// var newValue = incrementer(); // Should equal 5
+// console.log(fixedValue); // Should print 4
+// console.log(newValue);
+
+// --------------------------------------------------
+/*defined a function, mixedNumbers, which we are passing an array as an argument. Modify the function by using push() and unshift() to add 'I', 2, 'three' to the beginning of the array and 7, 'VIII', 9 to the end so that the returned array contains representations of the numbers 1-9 in order. */ 
+
+function mixedNumbers(arr) {
+ 
+   arr.unshift('I', 2, 'three');
+   arr.push(7, 'VIII', 9);
+  
+  return arr;
+}
+
+console.log(mixedNumbers(['IV', 5, 'six']));
