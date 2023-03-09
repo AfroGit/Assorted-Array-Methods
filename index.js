@@ -156,12 +156,21 @@ Having more high cards remaining in the deck favors the player. Each card is ass
 // --------------------------------------------------
 /*defined a function, mixedNumbers, which we are passing an array as an argument. Modify the function by using push() and unshift() to add 'I', 2, 'three' to the beginning of the array and 7, 'VIII', 9 to the end so that the returned array contains representations of the numbers 1-9 in order. */ 
 
-function mixedNumbers(arr) {
+// function mixedNumbers(arr) {
  
-   arr.unshift('I', 2, 'three');
-   arr.push(7, 'VIII', 9);
+//    arr.unshift('I', 2, 'three');
+//    arr.push(7, 'VIII', 9);
   
-  return arr;
-}
+//   return arr;
+// }
 
-console.log(mixedNumbers(['IV', 5, 'six']));
+// console.log(mixedNumbers(['IV', 5, 'six']));
+// --------------------------------------------------
+
+/*Use splice() to remove elements from arr, so that it only contains elements that sum to the value of 10. */ 
+
+const arr = [2, 4, 5, 1, 7, 5, 2, 1];
+
+let sumArray = arr.splice(1, 4);
+
+console.log(arr);
