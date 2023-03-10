@@ -178,21 +178,39 @@ Having more high cards remaining in the deck favors the player. Each card is ass
 // -----------------------------------------------------
 /*Define a function, htmlColorNames, which takes an array of HTML colors as an argument. Modify the function using splice() to remove the first two elements of the array and add 'DarkSalmon' and 'BlanchedAlmond' in their respective places. */ 
 
-function htmlColorNames(arr) {
+// function htmlColorNames(arr) {
  
-  arr.splice(0, 2, 'DarkSalmon', 'BlanchedAlmond' )
+//   arr.splice(0, 2, 'DarkSalmon', 'BlanchedAlmond' )
   
-  return arr;
-}
+//   return arr;
+// }
 
-console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
+// console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
 
 //------------__________-----------------____________---- 
 /* defined a function, forecast, that takes an array as an argument. Modify the function using slice() to extract information from the argument array and return a new array that contains the string elements warm and sunny. */ 
 
-function forecast(arr) {
+// function forecast(arr) {
   
-    return arr.slice(2, 4);
-};
+//     return arr.slice(2, 4);
+// };
 
-console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+// console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+// --------------------------------------------------
+ // let thisArray = [true, true, undefined, false, null];
+ // let thatArray = [...thisArray];// use the spread operator
+ //  console.log(thatArray);
+// ---------------------------------------------------
+// --------------------------------------------------------
+/*Define a function, copyMachine which takes arr (an array) and num (a number) as arguments. The function is supposed to return a new array made up of num copies of arr. We have done most of the work for you, but it doesn't work quite right yet. Modify the function using spread syntax so that it works correctly (hint: another method we have already covered might come in handy here!). */ 
+
+function copyMachine(arr, num){
+let newArray = [];
+  while(num >= 1){
+  
+    newArray.push([...arr])
+    num--;
+  }
+  return newArray
+};
+console.log(copyMachine([true, false, true], 2));
