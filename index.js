@@ -232,13 +232,48 @@ Having more high cards remaining in the deck favors the player. Each card is ass
 /* Define a function, quickCheck, that takes an array and an element as arguments. Modify the function using indexOf() so that it returns true if the passed element exists on the array, and false if it does not. */ 
 
 
-function quickCheck(arr, elem) {
+// function quickCheck(arr, elem) {
  
-   if(arr.indexOf(elem) >= 0){
-       return true;
-} 
-       return false;
+//    if(arr.indexOf(elem) >= 0){
+//        return true;
+// } 
+//        return false;
   
-};
+// };
 
-console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+// console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++
+// -----------------------------------------------------
+// function greaterThanTen(arr) {
+//   let newArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > 10) {
+//       newArr.push(arr[i]);
+//     }
+//   }
+//   return newArr;
+// }
+
+// console.log(greaterThanTen([2, 12, 8, 14, 80, 0, 1]));
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ------------------------------------------------------
+/*
+ Define a function, filteredArray, which takes arr, a nested array, and elem as arguments, and returns a new array. elem represents an element that may or may not be present on one or more of the arrays nested within arr. Modify the function, using a for loop, to return a filtered version of the passed array such that any array nested within arr containing elem has been removed.
+ */ 
+
+
+function filteredArray(arr, elem) {
+  let newArr = [];
+  
+for(let i = 0; i < arr.length; i++){
+if(arr[i].indexOf(elem) == -1){//returns
+  newArr.push(arr[i]);
+}
+}
+  
+  return newArr;
+}
+
+console.log(filteredArray([[5, 2, 7], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
