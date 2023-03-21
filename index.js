@@ -264,16 +264,72 @@ Having more high cards remaining in the deck favors the player. Each card is ass
  */ 
 
 
-function filteredArray(arr, elem) {
-  let newArr = [];
+// function filteredArray(arr, elem) {
+//   let newArr = [];
   
-for(let i = 0; i < arr.length; i++){
-if(arr[i].indexOf(elem) == -1){//returns
-  newArr.push(arr[i]);
-}
-}
+// for(let i = 0; i < arr.length; i++){
+// if(arr[i].indexOf(elem) == -1){//returns item index or -1 if absent.
+//   newArr.push(arr[i]);
+// }
+// }
   
-  return newArr;
+//   return newArr;
+// }
+
+// console.log(filteredArray([[5, 2, 7], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// --------------------------------------------------------
+/*Define a variable, myNestedArray, set equal to an array. Modify myNestedArray, using any combination of strings, numbers, and booleans for data elements, so that it has exactly five levels of depth (remember, the outer-most array is level 1). Somewhere on the third level, include the string deep, on the fourth level, include the string deeper, and on the fifth level, include the string deepest. */ 
+
+// let myNestedArray = [
+//   // Only change code below this line
+//   ['unshift', false, 1, 2, 3, 'complex', 'nested'],
+//   ['loop', 'shift', 6, 7, 1000, 'method'],
+//   ['concat', false, true, 'spread', 'array'],
+//   ['mutate', 1327.98, 'splice', 'slice', 'push'],
+//   ['iterate', 1.3849, 7, '8.4876', 'arbitrary', 'depth']
+//   // Only change code above this line
+// ];
+
+// myNestedArray[2][5] = ['deep'];
+// myNestedArray[3][5] = ['deeper'];
+// myNestedArray[4][5] = ['deepest'];
+// // console.log(myNestedArray);
+// console.log(myNestedArray[4][5]);
+
+// ************************************************
+// *************************************************
+
+/*Write a function that  takes a user object and adds the name of the friend argument to the array stored in user.data.friends and returns that array */ 
+
+
+let user = {
+  name: 'Kenneth',
+  age: 28,
+  data: {
+    username: 'kennethCodesAllDay',
+    joinDate: 'March 26, 2016',
+    organization: 'freeCodeCamp',
+    friends: [
+      'Sam',
+      'Kira',
+      'Tomo'
+    ],
+    location: {
+      city: 'San Francisco',
+      state: 'CA',
+      country: 'USA'
+    }
+  }
+};
+
+function addFriend(userObj, Zip) {
+  
+userObj.data.friends.push(Zip);
+return userObj.data.friends
+  
 }
 
-console.log(filteredArray([[5, 2, 7], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
+  console.log(addFriend(user, '53175'));
+console.log(user.data.location)
