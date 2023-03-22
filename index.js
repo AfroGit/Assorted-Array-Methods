@@ -304,32 +304,62 @@ Having more high cards remaining in the deck favors the player. Each card is ass
 /*Write a function that  takes a user object and adds the name of the friend argument to the array stored in user.data.friends and returns that array */ 
 
 
-let user = {
-  name: 'Kenneth',
-  age: 28,
-  data: {
-    username: 'kennethCodesAllDay',
-    joinDate: 'March 26, 2016',
-    organization: 'freeCodeCamp',
-    friends: [
-      'Sam',
-      'Kira',
-      'Tomo'
-    ],
-    location: {
-      city: 'San Francisco',
-      state: 'CA',
-      country: 'USA'
-    }
+// let user = {
+//   name: 'Kenneth',
+//   age: 28,
+//   data: {
+//     username: 'kennethCodesAllDay',
+//     joinDate: 'March 26, 2016',
+//     organization: 'freeCodeCamp',
+//     friends: [
+//       'Sam',
+//       'Kira',
+//       'Tomo'
+//     ],
+//     location: {
+//       city: 'San Francisco',
+//       state: 'CA',
+//       country: 'USA'
+//     }
+//   }
+// };
+
+// function addFriend(userObj, Zip) {
+  
+// userObj.data.friends.push(Zip);
+// return userObj.data.friends
+  
+//}
+
+//   console.log(addFriend(user, '53175'));
+// console.log(user.data.location)
+
+// ----------------------------=============+++++++++++
+// -----------------------------------------------
+
+/*write the code so the global array bookList is not changed inside either function. The add function should add the given bookName to the end of the array passed to it and return a new array (list). The remove function should remove the given bookName from the array passed to it.
+
+Note: Both functions should return an array, and any new parameters should be added before the bookName parameter. */ 
+
+
+// The global variable
+const bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
+
+
+function add(arr, bookName) {
+let newBook = [...arr];// Copy the bookList array to a new array
+  newBook.push(bookName);// Add bookName parameter to the end of the new array.
+  return newBook;// Return the new array.
   }
-};
+/*This function should remove a book from the list and return the list */
+function remove(arr, bookName) {
+  let newBook = [...arr];
+  const book_index = newBook.indexOf(bookName);// Check whether the bookName parameter is in new array.
+  if (book_index >= 0) {
 
-function addFriend(userObj, Zip) {
-  
-userObj.data.friends.push(Zip);
-return userObj.data.friends
-  
+    newBook.splice(book_index, 1);// Remove the given paramater from the new array.
+    return newBook;
+
+    // Change code above this line
+    }
 }
-
-  console.log(addFriend(user, '53175'));
-console.log(user.data.location)
